@@ -19,3 +19,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Run test suite (zero dependencies — no install step)
         run: node --test test/*.test.mjs
+      - name: Cross-runtime scalar digest conformance (quilt-attention#1)
+        run: python3 test/conformance.py

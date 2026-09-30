@@ -32,6 +32,8 @@ export const ACTS = ['relu', 'tanh', 'sigmoid'];
 
 export const GENESIS = '0'.repeat(64); // prev of the first receipt, like quilt-neighbourhood
 
+export const DTYPE_TAG = 'f64'; // receipts hash the dtype, not assume it (rule 2, like quilt-attention)
+
 // ── hashing ──────────────────────────────────────────────────────────────────────
 // Two representations, two jobs (the lesson cellgraph learned the hard way):
 //   * f64hex  — the CANONICAL BYTES of a float. 8 bytes, big-endian IEEE-754. This is
@@ -60,9 +62,18 @@ export function sha256hex(str) {
   return createHash('sha256').update(str, 'utf8').digest('hex');
 }
 
-// loss_sha: sha256 over the canonical bytes of the loss scalar
+// loss_sha: sha256 over the canonical bytes of the loss scalar.
+// Preimage = `${DTYPE_TAG}|8|${f64hex(loss)}` — the legible tagged string ("8" =
+// the byte width of one IEEE-754 double), portable by construction. NOT the v0.1.0
+// form, which hashed Buffer.from(hex,'hex').toString('latin1'): sha256hex hashes
+// UTF-8, so every canonical byte >= 0x80 re-encoded into TWO bytes — byte-exact
+// inside Node, but a different preimage than every other runtime's reading of
+// "sha256 over the canonical bytes", i.e. not portable at all. Reported and
+// root-caused in quilt-attention#1 (the same line shipped as scalarSha there);
+// both repos now share this preimage, and the Python reference in
+// test/conformance.py pins it cross-runtime (test/scalar-fixture.json).
 export function lossShaOf(loss) {
-  return sha256hex(Buffer.from(f64hex(loss), 'hex').toString('latin1'));
+  return sha256hex(`${DTYPE_TAG}|8|${f64hex(loss)}`);
 }
 
 // ── seeded PRNG ──────────────────────────────────────────────────────────────────

@@ -269,7 +269,7 @@ test('receipt entries carry exactly the promised fields, linked from genesis', (
   let prev = '0'.repeat(64);
   chain.forEach((e, i) => {
     assert.deepEqual(Object.keys(e), KEYS);
-    assert.equal(e.v, 1);
+    assert.equal(e.v, 2);
     assert.equal(e.seq, i + 1);
     assert.equal(e.epoch, i);
     assert.equal(e.prev, prev);

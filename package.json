@@ -1,6 +1,6 @@
 {
   "name": "quilt-nn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Neural nets as quilt cell graphs — weights, gradients and SGD steps are cells; every epoch receipted into a hash chain. Trains XOR + sine deterministically.",
   "type": "module",
   "main": "src/cellgraph.mjs",

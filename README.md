@@ -63,9 +63,12 @@ Same seed → same bytes, end to end:
 - SGD shuffles sample order per epoch from the **same** seeded LCG stream;
 - every cell aggregates its inputs in the **listed** order of its own `inputs[]`,
   so evaluation in *any* topological order is bit-identical (test NC1);
-- receipts hash canonical bytes: 8-byte big-endian IEEE-754 per float, fixed key
-  order per entry. Two runs of `train(...)` produce byte-identical chains
-  (test T2).
+- receipts hash canonical bytes: a scalar is sealed as
+  `sha256("f64|8|<8-byte big-endian IEEE-754 hex>")` — a legible tagged STRING
+  preimage that any independent runtime reproduces byte-for-byte (fixed key
+  order per entry). Two runs of `train(...)` produce byte-identical chains
+  (test T2); node and python agree on all 32 fixture scalars
+  (test/conformance.test.mjs + test/conformance.py).
 
 ## Receipt chain
 
@@ -73,19 +76,27 @@ Every epoch appends:
 
 ```json
 {
-  "v": 1, "seq": 1, "epoch": 0,
+  "v": 2, "seq": 1, "epoch": 0,
   "loss": 0.7147,
-  "loss_sha": "<sha256 of the canonical 8 bytes of loss>",
+  "loss_sha": "<sha256 of 'f64|8|<the loss's 8 big-endian IEEE-754 bytes as hex>'>",
   "weight_root_sha": "<sha256 over every weight's canonical bytes, graph order>",
   "prev": "000...0",
   "sha": "<sha256 of the canonical entry JSON>"
 }
 ```
 
+`loss_sha` is a **portable commitment**: it hashes the legible tagged string, so
+an independent Python (or any runtime) implementation of the spec produces the
+identical digest — pinned by the cross-runtime conformance pair in `test/`
+(`conformance.test.mjs` + `conformance.py` over a shared 32-scalar adversarial
+fixture). Receipt format v2 (v0.1.0's `v: 1` hashed a latin1-re-encoded buffer
+instead — deterministic inside Node, not reproducible elsewhere;
+[quilt-attention#1](https://github.com/SuperInstance/quilt-attention/issues/1)).
 `verify(chain)` recomputes every commitment and link: edited losses, edited
 weight roots, edited hashes, renumbered or reordered or dropped entries are all
-detected. Honest limit, stated once: a bare hash chain cannot detect truncation
-of its tail without an externally anchored tip — same as git.
+detected, and v1 receipts are rejected with a named reason. Honest limit, stated
+once: a bare hash chain cannot detect truncation of its tail without an
+externally anchored tip — same as git.
 
 ## Usage
 
@@ -99,7 +110,7 @@ const { chain, tip, finalLoss, env, metrics } =
 
 verify(chain);          // true — this run's chain is internally consistent
 finalLoss;              // 1.04e-4  (XOR, seed 42, deterministic)
-tip;                    // fcb51c678c75615c6c9adb03bef8fe795b48c45712c014b54c6ee6eebaff58cc
+tip;                    // f2af70a54b192ed49161f1cd4242b1ef4c8e80c083380e3a883de229e450c6e7
 ```
 
 ## The nets
@@ -123,7 +134,8 @@ chains for same seed · T3 analytic vs numeric gradients within 1e-5 (20 random
 weights, at init AND after training) · T4 chain tamper detection (8 tamper
 classes) · NC1 topological-order independence (bit-identical) · NC2 seeded-init
 reproducibility — plus tick-arithmetic, snapshot round-trip, and receipt-shape
-checks. 12 tests, ~5 s wall, zero dependencies.
+checks. 12 battery tests + 4 cross-runtime conformance tests (32 shared fixture
+scalars, node vs python), ~5 s wall, zero dependencies.
 
 See [TEMPLATE.md](TEMPLATE.md) to add a layer, swap an activation, or export a
 trained net in 5 minutes.
