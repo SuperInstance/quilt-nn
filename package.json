@@ -1,0 +1,32 @@
+{
+  "name": "quilt-nn",
+  "version": "0.1.0",
+  "description": "Neural nets as quilt cell graphs — weights, gradients and SGD steps are cells; every epoch receipted into a hash chain. Trains XOR + sine deterministically.",
+  "type": "module",
+  "main": "src/cellgraph.mjs",
+  "exports": {
+    ".": "./src/cellgraph.mjs",
+    "./train": "./src/train.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "gen:nets": "node scripts/gen-nets.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "quilt",
+    "cells",
+    "neural-network",
+    "autograd",
+    "deterministic",
+    "receipt-chain",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperInstance/quilt-nn.git"
+  }
+}

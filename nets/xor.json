@@ -1,0 +1,579 @@
+{
+  "cells": [
+    {
+      "id": "in0",
+      "kind": "input",
+      "inputs": [],
+      "params": {
+        "slot": 0
+      }
+    },
+    {
+      "id": "in1",
+      "kind": "input",
+      "inputs": [],
+      "params": {
+        "slot": 1
+      }
+    },
+    {
+      "id": "target",
+      "kind": "input",
+      "inputs": [],
+      "params": {
+        "target": true
+      }
+    },
+    {
+      "id": "w0_0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "w0_0_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "b0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "p0_0_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p0_0_1",
+      "kind": "product",
+      "inputs": [
+        "in1",
+        "w0_0_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_0",
+      "kind": "sum",
+      "inputs": [
+        "p0_0_0",
+        "p0_0_1",
+        "b0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_0",
+      "kind": "act",
+      "inputs": [
+        "s0_0"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_1_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "w0_1_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "b0_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "p0_1_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_1_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p0_1_1",
+      "kind": "product",
+      "inputs": [
+        "in1",
+        "w0_1_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_1",
+      "kind": "sum",
+      "inputs": [
+        "p0_1_0",
+        "p0_1_1",
+        "b0_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_1",
+      "kind": "act",
+      "inputs": [
+        "s0_1"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_2_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "w0_2_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "b0_2",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "p0_2_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_2_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p0_2_1",
+      "kind": "product",
+      "inputs": [
+        "in1",
+        "w0_2_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_2",
+      "kind": "sum",
+      "inputs": [
+        "p0_2_0",
+        "p0_2_1",
+        "b0_2"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_2",
+      "kind": "act",
+      "inputs": [
+        "s0_2"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_3_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "w0_3_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "b0_3",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1
+      }
+    },
+    {
+      "id": "p0_3_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_3_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p0_3_1",
+      "kind": "product",
+      "inputs": [
+        "in1",
+        "w0_3_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_3",
+      "kind": "sum",
+      "inputs": [
+        "p0_3_0",
+        "p0_3_1",
+        "b0_3"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_3",
+      "kind": "act",
+      "inputs": [
+        "s0_3"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w1_0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1.0954451150103321
+      }
+    },
+    {
+      "id": "w1_0_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1.0954451150103321
+      }
+    },
+    {
+      "id": "w1_0_2",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1.0954451150103321
+      }
+    },
+    {
+      "id": "w1_0_3",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1.0954451150103321
+      }
+    },
+    {
+      "id": "b1_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 1.0954451150103321
+      }
+    },
+    {
+      "id": "p1_0_0",
+      "kind": "product",
+      "inputs": [
+        "a0_0",
+        "w1_0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_1",
+      "kind": "product",
+      "inputs": [
+        "a0_1",
+        "w1_0_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_2",
+      "kind": "product",
+      "inputs": [
+        "a0_2",
+        "w1_0_2"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_3",
+      "kind": "product",
+      "inputs": [
+        "a0_3",
+        "w1_0_3"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s1_0",
+      "kind": "sum",
+      "inputs": [
+        "p1_0_0",
+        "p1_0_1",
+        "p1_0_2",
+        "p1_0_3",
+        "b1_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "pred",
+      "kind": "act",
+      "inputs": [
+        "s1_0"
+      ],
+      "params": {
+        "fn": "sigmoid"
+      }
+    },
+    {
+      "id": "loss",
+      "kind": "loss",
+      "inputs": [
+        "pred",
+        "target"
+      ],
+      "params": {}
+    },
+    {
+      "id": "g_w0_0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_0_0"
+      }
+    },
+    {
+      "id": "g_w0_0_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_0_1"
+      }
+    },
+    {
+      "id": "g_b0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_0"
+      }
+    },
+    {
+      "id": "g_w0_1_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_1_0"
+      }
+    },
+    {
+      "id": "g_w0_1_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_1_1"
+      }
+    },
+    {
+      "id": "g_b0_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_1"
+      }
+    },
+    {
+      "id": "g_w0_2_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_2_0"
+      }
+    },
+    {
+      "id": "g_w0_2_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_2_1"
+      }
+    },
+    {
+      "id": "g_b0_2",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_2"
+      }
+    },
+    {
+      "id": "g_w0_3_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_3_0"
+      }
+    },
+    {
+      "id": "g_w0_3_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_3_1"
+      }
+    },
+    {
+      "id": "g_b0_3",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_3"
+      }
+    },
+    {
+      "id": "g_w1_0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_0"
+      }
+    },
+    {
+      "id": "g_w1_0_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_1"
+      }
+    },
+    {
+      "id": "g_w1_0_2",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_2"
+      }
+    },
+    {
+      "id": "g_w1_0_3",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_3"
+      }
+    },
+    {
+      "id": "g_b1_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b1_0"
+      }
+    },
+    {
+      "id": "tick",
+      "kind": "tick",
+      "inputs": [
+        "g_w0_0_0",
+        "g_w0_0_1",
+        "g_b0_0",
+        "g_w0_1_0",
+        "g_w0_1_1",
+        "g_b0_1",
+        "g_w0_2_0",
+        "g_w0_2_1",
+        "g_b0_2",
+        "g_w0_3_0",
+        "g_w0_3_1",
+        "g_b0_3",
+        "g_w1_0_0",
+        "g_w1_0_1",
+        "g_w1_0_2",
+        "g_w1_0_3",
+        "g_b1_0"
+      ],
+      "params": {
+        "lr": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,1595 @@
+{
+  "cells": [
+    {
+      "id": "in0",
+      "kind": "input",
+      "inputs": [],
+      "params": {
+        "slot": 0
+      }
+    },
+    {
+      "id": "target",
+      "kind": "input",
+      "inputs": [],
+      "params": {
+        "target": true
+      }
+    },
+    {
+      "id": "w0_0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_0_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_0",
+      "kind": "sum",
+      "inputs": [
+        "p0_0_0",
+        "b0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_0",
+      "kind": "act",
+      "inputs": [
+        "s0_0"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_1_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_1_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_1_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_1",
+      "kind": "sum",
+      "inputs": [
+        "p0_1_0",
+        "b0_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_1",
+      "kind": "act",
+      "inputs": [
+        "s0_1"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_2_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_2",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_2_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_2_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_2",
+      "kind": "sum",
+      "inputs": [
+        "p0_2_0",
+        "b0_2"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_2",
+      "kind": "act",
+      "inputs": [
+        "s0_2"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_3_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_3",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_3_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_3_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_3",
+      "kind": "sum",
+      "inputs": [
+        "p0_3_0",
+        "b0_3"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_3",
+      "kind": "act",
+      "inputs": [
+        "s0_3"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_4_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_4",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_4_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_4_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_4",
+      "kind": "sum",
+      "inputs": [
+        "p0_4_0",
+        "b0_4"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_4",
+      "kind": "act",
+      "inputs": [
+        "s0_4"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_5_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_5",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_5_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_5_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_5",
+      "kind": "sum",
+      "inputs": [
+        "p0_5_0",
+        "b0_5"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_5",
+      "kind": "act",
+      "inputs": [
+        "s0_5"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_6_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_6",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_6_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_6_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_6",
+      "kind": "sum",
+      "inputs": [
+        "p0_6_0",
+        "b0_6"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_6",
+      "kind": "act",
+      "inputs": [
+        "s0_6"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_7_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_7",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_7_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_7_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_7",
+      "kind": "sum",
+      "inputs": [
+        "p0_7_0",
+        "b0_7"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_7",
+      "kind": "act",
+      "inputs": [
+        "s0_7"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_8_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_8",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_8_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_8_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_8",
+      "kind": "sum",
+      "inputs": [
+        "p0_8_0",
+        "b0_8"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_8",
+      "kind": "act",
+      "inputs": [
+        "s0_8"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_9_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_9",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_9_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_9_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_9",
+      "kind": "sum",
+      "inputs": [
+        "p0_9_0",
+        "b0_9"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_9",
+      "kind": "act",
+      "inputs": [
+        "s0_9"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_10_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_10",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_10_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_10_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_10",
+      "kind": "sum",
+      "inputs": [
+        "p0_10_0",
+        "b0_10"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_10",
+      "kind": "act",
+      "inputs": [
+        "s0_10"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_11_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_11",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_11_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_11_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_11",
+      "kind": "sum",
+      "inputs": [
+        "p0_11_0",
+        "b0_11"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_11",
+      "kind": "act",
+      "inputs": [
+        "s0_11"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_12_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_12",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_12_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_12_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_12",
+      "kind": "sum",
+      "inputs": [
+        "p0_12_0",
+        "b0_12"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_12",
+      "kind": "act",
+      "inputs": [
+        "s0_12"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_13_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_13",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_13_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_13_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_13",
+      "kind": "sum",
+      "inputs": [
+        "p0_13_0",
+        "b0_13"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_13",
+      "kind": "act",
+      "inputs": [
+        "s0_13"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_14_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_14",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_14_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_14_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_14",
+      "kind": "sum",
+      "inputs": [
+        "p0_14_0",
+        "b0_14"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_14",
+      "kind": "act",
+      "inputs": [
+        "s0_14"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w0_15_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b0_15",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p0_15_0",
+      "kind": "product",
+      "inputs": [
+        "in0",
+        "w0_15_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s0_15",
+      "kind": "sum",
+      "inputs": [
+        "p0_15_0",
+        "b0_15"
+      ],
+      "params": {}
+    },
+    {
+      "id": "a0_15",
+      "kind": "act",
+      "inputs": [
+        "s0_15"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "w1_0_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_1",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_2",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_3",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_4",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_5",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_6",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_7",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_8",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_9",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_10",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_11",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_12",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_13",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_14",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "w1_0_15",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "b1_0",
+      "kind": "weight",
+      "inputs": [],
+      "params": {
+        "scale": 0.5940885257860046
+      }
+    },
+    {
+      "id": "p1_0_0",
+      "kind": "product",
+      "inputs": [
+        "a0_0",
+        "w1_0_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_1",
+      "kind": "product",
+      "inputs": [
+        "a0_1",
+        "w1_0_1"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_2",
+      "kind": "product",
+      "inputs": [
+        "a0_2",
+        "w1_0_2"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_3",
+      "kind": "product",
+      "inputs": [
+        "a0_3",
+        "w1_0_3"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_4",
+      "kind": "product",
+      "inputs": [
+        "a0_4",
+        "w1_0_4"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_5",
+      "kind": "product",
+      "inputs": [
+        "a0_5",
+        "w1_0_5"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_6",
+      "kind": "product",
+      "inputs": [
+        "a0_6",
+        "w1_0_6"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_7",
+      "kind": "product",
+      "inputs": [
+        "a0_7",
+        "w1_0_7"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_8",
+      "kind": "product",
+      "inputs": [
+        "a0_8",
+        "w1_0_8"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_9",
+      "kind": "product",
+      "inputs": [
+        "a0_9",
+        "w1_0_9"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_10",
+      "kind": "product",
+      "inputs": [
+        "a0_10",
+        "w1_0_10"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_11",
+      "kind": "product",
+      "inputs": [
+        "a0_11",
+        "w1_0_11"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_12",
+      "kind": "product",
+      "inputs": [
+        "a0_12",
+        "w1_0_12"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_13",
+      "kind": "product",
+      "inputs": [
+        "a0_13",
+        "w1_0_13"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_14",
+      "kind": "product",
+      "inputs": [
+        "a0_14",
+        "w1_0_14"
+      ],
+      "params": {}
+    },
+    {
+      "id": "p1_0_15",
+      "kind": "product",
+      "inputs": [
+        "a0_15",
+        "w1_0_15"
+      ],
+      "params": {}
+    },
+    {
+      "id": "s1_0",
+      "kind": "sum",
+      "inputs": [
+        "p1_0_0",
+        "p1_0_1",
+        "p1_0_2",
+        "p1_0_3",
+        "p1_0_4",
+        "p1_0_5",
+        "p1_0_6",
+        "p1_0_7",
+        "p1_0_8",
+        "p1_0_9",
+        "p1_0_10",
+        "p1_0_11",
+        "p1_0_12",
+        "p1_0_13",
+        "p1_0_14",
+        "p1_0_15",
+        "b1_0"
+      ],
+      "params": {}
+    },
+    {
+      "id": "pred",
+      "kind": "act",
+      "inputs": [
+        "s1_0"
+      ],
+      "params": {
+        "fn": "tanh"
+      }
+    },
+    {
+      "id": "loss",
+      "kind": "loss",
+      "inputs": [
+        "pred",
+        "target"
+      ],
+      "params": {}
+    },
+    {
+      "id": "g_w0_0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_0_0"
+      }
+    },
+    {
+      "id": "g_b0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_0"
+      }
+    },
+    {
+      "id": "g_w0_1_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_1_0"
+      }
+    },
+    {
+      "id": "g_b0_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_1"
+      }
+    },
+    {
+      "id": "g_w0_2_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_2_0"
+      }
+    },
+    {
+      "id": "g_b0_2",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_2"
+      }
+    },
+    {
+      "id": "g_w0_3_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_3_0"
+      }
+    },
+    {
+      "id": "g_b0_3",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_3"
+      }
+    },
+    {
+      "id": "g_w0_4_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_4_0"
+      }
+    },
+    {
+      "id": "g_b0_4",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_4"
+      }
+    },
+    {
+      "id": "g_w0_5_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_5_0"
+      }
+    },
+    {
+      "id": "g_b0_5",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_5"
+      }
+    },
+    {
+      "id": "g_w0_6_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_6_0"
+      }
+    },
+    {
+      "id": "g_b0_6",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_6"
+      }
+    },
+    {
+      "id": "g_w0_7_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_7_0"
+      }
+    },
+    {
+      "id": "g_b0_7",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_7"
+      }
+    },
+    {
+      "id": "g_w0_8_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_8_0"
+      }
+    },
+    {
+      "id": "g_b0_8",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_8"
+      }
+    },
+    {
+      "id": "g_w0_9_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_9_0"
+      }
+    },
+    {
+      "id": "g_b0_9",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_9"
+      }
+    },
+    {
+      "id": "g_w0_10_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_10_0"
+      }
+    },
+    {
+      "id": "g_b0_10",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_10"
+      }
+    },
+    {
+      "id": "g_w0_11_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_11_0"
+      }
+    },
+    {
+      "id": "g_b0_11",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_11"
+      }
+    },
+    {
+      "id": "g_w0_12_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_12_0"
+      }
+    },
+    {
+      "id": "g_b0_12",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_12"
+      }
+    },
+    {
+      "id": "g_w0_13_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_13_0"
+      }
+    },
+    {
+      "id": "g_b0_13",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_13"
+      }
+    },
+    {
+      "id": "g_w0_14_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_14_0"
+      }
+    },
+    {
+      "id": "g_b0_14",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_14"
+      }
+    },
+    {
+      "id": "g_w0_15_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w0_15_0"
+      }
+    },
+    {
+      "id": "g_b0_15",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b0_15"
+      }
+    },
+    {
+      "id": "g_w1_0_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_0"
+      }
+    },
+    {
+      "id": "g_w1_0_1",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_1"
+      }
+    },
+    {
+      "id": "g_w1_0_2",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_2"
+      }
+    },
+    {
+      "id": "g_w1_0_3",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_3"
+      }
+    },
+    {
+      "id": "g_w1_0_4",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_4"
+      }
+    },
+    {
+      "id": "g_w1_0_5",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_5"
+      }
+    },
+    {
+      "id": "g_w1_0_6",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_6"
+      }
+    },
+    {
+      "id": "g_w1_0_7",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_7"
+      }
+    },
+    {
+      "id": "g_w1_0_8",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_8"
+      }
+    },
+    {
+      "id": "g_w1_0_9",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_9"
+      }
+    },
+    {
+      "id": "g_w1_0_10",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_10"
+      }
+    },
+    {
+      "id": "g_w1_0_11",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_11"
+      }
+    },
+    {
+      "id": "g_w1_0_12",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_12"
+      }
+    },
+    {
+      "id": "g_w1_0_13",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_13"
+      }
+    },
+    {
+      "id": "g_w1_0_14",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_14"
+      }
+    },
+    {
+      "id": "g_w1_0_15",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "w1_0_15"
+      }
+    },
+    {
+      "id": "g_b1_0",
+      "kind": "grad",
+      "inputs": [
+        "loss"
+      ],
+      "params": {
+        "of": "b1_0"
+      }
+    },
+    {
+      "id": "tick",
+      "kind": "tick",
+      "inputs": [
+        "g_w0_0_0",
+        "g_b0_0",
+        "g_w0_1_0",
+        "g_b0_1",
+        "g_w0_2_0",
+        "g_b0_2",
+        "g_w0_3_0",
+        "g_b0_3",
+        "g_w0_4_0",
+        "g_b0_4",
+        "g_w0_5_0",
+        "g_b0_5",
+        "g_w0_6_0",
+        "g_b0_6",
+        "g_w0_7_0",
+        "g_b0_7",
+        "g_w0_8_0",
+        "g_b0_8",
+        "g_w0_9_0",
+        "g_b0_9",
+        "g_w0_10_0",
+        "g_b0_10",
+        "g_w0_11_0",
+        "g_b0_11",
+        "g_w0_12_0",
+        "g_b0_12",
+        "g_w0_13_0",
+        "g_b0_13",
+        "g_w0_14_0",
+        "g_b0_14",
+        "g_w0_15_0",
+        "g_b0_15",
+        "g_w1_0_0",
+        "g_w1_0_1",
+        "g_w1_0_2",
+        "g_w1_0_3",
+        "g_w1_0_4",
+        "g_w1_0_5",
+        "g_w1_0_6",
+        "g_w1_0_7",
+        "g_w1_0_8",
+        "g_w1_0_9",
+        "g_w1_0_10",
+        "g_w1_0_11",
+        "g_w1_0_12",
+        "g_w1_0_13",
+        "g_w1_0_14",
+        "g_w1_0_15",
+        "g_b1_0"
+      ],
+      "params": {
+        "lr": 0.5
+      }
+    }
+  ]
+}
